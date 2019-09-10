@@ -8,7 +8,7 @@ The app can be used together with Mi Fit to display CGM values as notifications 
 Android notification settings should be capable of hiding the notifications of this app from most
 parts of the system, while Mi Fit can forward them.
 
-# Suggested improvements
+### Suggested improvements
 
 - Improve support for different version of the Dexcom app (currently only matches one package name and also parsing the notification with the current reading is only tested on one phone/android version)
 - Support more configuration options in the UI (currently it only let's you choose "silent hours" and start off the service)
