@@ -11,9 +11,6 @@ import android.service.notification.StatusBarNotification;
 
 import androidx.core.app.NotificationCompat;
 
-import com.example.myapplication.R;
-
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
