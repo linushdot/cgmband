@@ -9,7 +9,7 @@ import android.widget.RemoteViews;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,7 +20,7 @@ import linushdot.cgmband.CgmValueExtractor;
 /***
  * This extractor supports Dexcom G6 notifications.
  *
- * Currently it only matches one packages, needs to be expanded.
+ * Currently it only matches some packages, needs to be expanded.
  * Also the value extraction through reflection was only tested on android 9 and could be unreliable
  * on other android versions and versions of the Dexcom app.
  */
@@ -28,7 +28,10 @@ public class DexcomValueExtractor implements CgmValueExtractor {
 
     // Only consider notifications from the following packages, needs expansion
     private final List<String> packageFilter =
-            Collections.singletonList("com.dexcom.g6.region1.mmol");
+            Arrays.asList("com.dexcom.g6.region1.mmol",
+                    "com.dexcom.g6.region1.mgdl",
+                    "com.dexcom.g6.region3.mmol",
+                    "com.dexcom.g6.region3.mgdl");
 
     @Override
     public boolean match(StatusBarNotification sbn) {
